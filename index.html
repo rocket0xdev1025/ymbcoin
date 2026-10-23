@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Missed Bitches ($YMBCOIN)</title>
+  <meta name="description" content="Trump just showed a new coin. You Missed Bitches. $YMBCOIN on Solana.">
+  <meta name="theme-color" content="#07111c">
+  <link rel="icon" href="logo.png">
+  <meta property="og:title" content="You Missed Bitches ($YMBCOIN)">
+  <meta property="og:description" content="Trump just showed a new coin. You Missed Bitches. $YMBCOIN on Solana.">
+  <meta property="og:image" content="banner.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            stamp: ['Bebas Neue', 'sans-serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --ink: #1a1206;
+      --cream: #f6edd4;
+      --gold: #e2b93b;
+      --gold-bright: #ffe7a3;
+      --gold-deep: #8a6420;
+      --navy: #07111c;
+      --crimson: #b22234;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Outfit, sans-serif;
+      color: var(--cream);
+      background: var(--navy);
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .gold-text {
+      background: linear-gradient(180deg, #fff6d2 0%, #f0d36a 38%, #c9962c 72%, #f8e7a8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-title {
+      font-family: Cinzel, serif;
+      font-weight: 900;
+      font-size: clamp(3.1rem, 8vw, 6.4rem);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(12, 22, 40, 0.78), rgba(7, 14, 26, 0.88));
+      border: 1px solid rgba(226, 185, 59, 0.38);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 236, 180, 0.28),
+        0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-gold {
+      background: linear-gradient(180deg, #fff1b8 0%, #e2b93b 46%, #a67c22 100%);
+      color: #2a1c07;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 8px 24px rgba(226, 185, 59, 0.28);
+    }
+
+    .btn-gold:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn-gold:active { transform: translateY(0); }
+
+    .btn-ghost {
+      color: var(--gold-bright);
+      border: 1px solid rgba(226, 185, 59, 0.7);
+      background: rgba(8, 14, 26, 0.45);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(226, 185, 59, 0.14);
+      transform: translateY(-1px);
+    }
+
+    .reeded {
+      background: repeating-conic-gradient(from 0deg, #fff4c8 0deg 1.5deg, #8d6a22 1.5deg 3.1deg);
+      box-shadow:
+        0 0 0 3px #f3d78a,
+        0 0 0 7px #6e5318,
+        0 30px 70px rgba(0, 0, 0, 0.55),
+        0 0 90px rgba(226, 185, 59, 0.38);
+    }
+
+    .reeded-bar {
+      height: 14px;
+      background: repeating-linear-gradient(90deg, #fff1b8 0 2px, #7a5c1c 2px 5px, #e2b93b 5px 7px);
+    }
+
+    .flag-ribbon {
+      background: repeating-linear-gradient(
+        90deg,
+        #b22234 0 18px,
+        #f4efe4 18px 28px,
+        #1d2f5f 28px 40px
+      );
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker 28s linear infinite;
+    }
+
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes spin-slow {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-140%) rotate(18deg); }
+      45%, 100% { transform: translateX(140%) rotate(18deg); }
+    }
+
+    .coin-float { animation: float 5.5s ease-in-out infinite; }
+    .spin-slow { animation: spin-slow 46s linear infinite; }
+
+    .coin-face { position: relative; overflow: hidden; }
+    .coin-face::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: linear-gradient(90deg, transparent, rgba(255, 248, 220, 0.45), transparent);
+      animation: shine 4.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .starfield {
+      background-image:
+        radial-gradient(1.5px 1.5px at 12% 22%, rgba(255, 236, 190, 0.85) 50%, transparent 51%),
+        radial-gradient(1.2px 1.2px at 28% 70%, rgba(255, 236, 190, 0.7) 50%, transparent 51%),
+        radial-gradient(1.4px 1.4px at 72% 18%, rgba(255, 236, 190, 0.75) 50%, transparent 51%),
+        radial-gradient(1px 1px at 84% 62%, rgba(255, 236, 190, 0.6) 50%, transparent 51%),
+        radial-gradient(1.3px 1.3px at 48% 40%, rgba(255, 236, 190, 0.55) 50%, transparent 51%),
+        radial-gradient(1px 1px at 60% 82%, rgba(255, 236, 190, 0.65) 50%, transparent 51%);
+    }
+
+    section { scroll-margin-top: 5.5rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track, .coin-float, .spin-slow, .coin-face::after {
+        animation: none;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="fixed inset-0 -z-10">
+    <img src="banner.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#07111c]/80 via-[#07111c]/88 to-[#050910]"></div>
+    <div class="absolute inset-0 starfield opacity-70"></div>
+  </div>
+
+  <div class="flag-ribbon h-1.5 w-full"></div>
+
+  <header class="sticky top-0 z-40 border-b border-[#e2b93b]/30 bg-[#07111c]/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-11 w-11 rounded-full object-cover ring-2 ring-[#e2b93b]" width="44" height="44">
+        <span class="leading-tight">
+          <span class="block font-display text-sm font-bold tracking-[0.14em] text-[#ffe7a3]">YOU MISSED BITCHES</span>
+          <span class="block font-stamp text-lg tracking-[0.22em] text-[#e2b93b]">$YMBCOIN</span>
+        </span>
+      </a>
+
+      <nav class="flex items-center gap-2 sm:gap-3">
+        <a href="#how" class="hidden px-2 font-stamp text-lg tracking-[0.16em] text-[#f6edd4] hover:text-[#ffe7a3] sm:inline">HOW TO BUY</a>
+        <a href="https://t.me/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-full ring-2 ring-[#e2b93b]/50 transition hover:ring-[#ffe7a3]" aria-label="Telegram">
+          <img src="tg.png" alt="Telegram" class="h-10 w-10 object-cover" width="40" height="40">
+        </a>
+        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center overflow-hidden rounded-lg bg-black ring-2 ring-[#e2b93b]/50 transition hover:ring-[#ffe7a3]" aria-label="X">
+          <img src="x.png" alt="X" class="h-10 w-10 object-cover" width="40" height="40">
+        </a>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost rounded-full px-4 py-2 font-stamp text-lg tracking-[0.16em] transition">CHART</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="btn-gold rounded-full px-4 py-2 font-stamp text-lg tracking-[0.16em] transition">BUY NOW</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+        <div>
+          <p class="font-stamp text-xl tracking-[0.28em] text-[#f4efe4]/80">★ COMMEMORATIVE ISSUE OF 2026 ★</p>
+          <p class="mt-4 inline-flex rounded-full border border-[#e2b93b]/50 bg-[#07111c]/50 px-4 py-1.5 font-stamp text-lg tracking-[0.18em] text-[#ffe7a3]">
+            TRUMP JUST SHOWED A NEW COIN
+          </p>
+          <h1 class="hero-title gold-text mt-5">
+            YOU MISSED<br>BITCHES
+          </h1>
+          <p class="mt-4 font-stamp text-4xl tracking-[0.24em] text-[#ffe7a3]">$YMBCOIN</p>
+          <p class="mt-5 max-w-xl text-lg font-light leading-relaxed text-[#f6edd4]/90">
+            Trump just showed a new coin, “You Missed Bitches.” The face is gold. The chain is Solana. The ticker is $YMBCOIN. Blink and the mint is already on the table.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-stamp text-2xl tracking-[0.2em] transition">
+              BUY NOW
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center rounded-full px-8 py-3.5 font-stamp text-2xl tracking-[0.2em] transition">CHART</a>
+          </div>
+
+          <div class="mt-6 flex items-center gap-3">
+            <span class="font-stamp text-lg tracking-[0.2em] text-[#e2b93b]/80">FOLLOW</span>
+            <a href="https://t.me/YMBCOINtrump" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <img src="tg.png" alt="" class="h-11 w-11 rounded-full object-cover ring-2 ring-[#e2b93b]/60" width="44" height="44">
+            </a>
+            <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-lg ring-2 ring-[#e2b93b]/60" aria-label="X">
+              <img src="x.png" alt="" class="h-11 w-11 object-cover" width="44" height="44">
+            </a>
+          </div>
+        </div>
+
+        <div class="coin-float relative mx-auto aspect-square w-[min(440px,88vw)]">
+          <div class="spin-slow pointer-events-none absolute -inset-6 rounded-full border border-dashed border-[#e2b93b]/50"></div>
+          <div class="pointer-events-none absolute -inset-10 rounded-full bg-[#e2b93b]/20 blur-3xl"></div>
+          <svg class="absolute inset-0 h-full w-full" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="legend" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/>
+            </defs>
+            <text fill="#ffe7a3" font-family="Cinzel, serif" font-size="8.5" font-weight="700" letter-spacing="1.4">
+              <textPath href="#legend">★ YOU MISSED BITCHES ★ $YMBCOIN ★ SOLANA MINT ★</textPath>
+            </text>
+          </svg>
+          <div class="reeded absolute inset-[11%] rounded-full p-[14px]">
+            <div class="coin-face h-full w-full rounded-full">
+              <img src="logo.png" alt="You Missed Bitches gold coin" class="h-full w-full rounded-full object-cover" width="640" height="640">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker overflow-hidden border-y border-[#e2b93b]/40 bg-[#07111c]/75 py-3">
+      <div class="ticker-track font-stamp text-2xl tracking-[0.22em] text-[#ffe7a3]">
+        <span class="px-4">TRUMP JUST SHOWED A NEW COIN · YOU MISSED BITCHES · $YMBCOIN · SOLANA ·</span>
+        <span class="px-4">TRUMP JUST SHOWED A NEW COIN · YOU MISSED BITCHES · $YMBCOIN · SOLANA ·</span>
+        <span class="px-4">TRUMP JUST SHOWED A NEW COIN · YOU MISSED BITCHES · $YMBCOIN · SOLANA ·</span>
+        <span class="px-4">TRUMP JUST SHOWED A NEW COIN · YOU MISSED BITCHES · $YMBCOIN · SOLANA ·</span>
+      </div>
+    </div>
+
+    <section id="ca" class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <div class="panel rounded-3xl p-6 sm:p-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="font-stamp text-xl tracking-[0.28em] text-[#e2b93b]">OFFICIAL MINT</p>
+            <h2 class="mt-2 font-display text-3xl font-bold text-[#ffe7a3] sm:text-4xl">Contract Address</h2>
+            <p class="mt-2 max-w-xl text-[#f6edd4]/80">Copy the mint before you swap. It reads TBA until the contract is posted.</p>
+          </div>
+          <div class="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-4 lg:max-w-xl">
+            <div class="rounded-2xl border border-[#e2b93b]/25 bg-black/30 px-3 py-3">
+              <p class="font-stamp tracking-[0.16em] text-[#e2b93b]/80">NAME</p>
+              <p class="mt-1 text-sm font-medium text-[#fff6d2]">You Missed Bitches</p>
+            </div>
+            <div class="rounded-2xl border border-[#e2b93b]/25 bg-black/30 px-3 py-3">
+              <p class="font-stamp tracking-[0.16em] text-[#e2b93b]/80">SYMBOL</p>
+              <p class="mt-1 text-sm font-medium text-[#fff6d2]">YMBCOIN</p>
+            </div>
+            <div class="rounded-2xl border border-[#e2b93b]/25 bg-black/30 px-3 py-3">
+              <p class="font-stamp tracking-[0.16em] text-[#e2b93b]/80">CHAIN</p>
+              <p class="mt-1 text-sm font-medium text-[#fff6d2]">Solana</p>
+            </div>
+            <div class="rounded-2xl border border-[#e2b93b]/25 bg-black/30 px-3 py-3">
+              <p class="font-stamp tracking-[0.16em] text-[#e2b93b]/80">PAIR</p>
+              <p class="mt-1 text-sm font-medium text-[#fff6d2]">SOL / $YMBCOIN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 rounded-2xl border border-[#e2b93b]/40 bg-[#050910]/70 p-3 sm:flex-row sm:items-center">
+          <span class="shrink-0 px-3 font-stamp text-2xl tracking-[0.2em] text-[#e2b93b]">CA</span>
+          <button id="caText" type="button" class="min-w-0 flex-1 truncate rounded-xl bg-black/40 px-4 py-3 text-left font-mono text-lg tracking-wide text-[#fff6d2] hover:bg-black/55" title="Copy contract address">TBA</button>
+          <button id="copyBtn" type="button" class="btn-gold rounded-xl px-6 py-3 font-stamp text-2xl tracking-[0.18em] transition">COPY</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="reeded-bar"></div>
+
+    <section id="how" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="font-stamp text-xl tracking-[0.28em] text-[#e2b93b]">FOUR STRIKES OF THE MINT</p>
+        <h2 class="mt-2 font-display text-4xl font-bold text-[#ffe7a3] sm:text-5xl">How to Buy $YMBCOIN</h2>
+        <p class="mt-4 text-lg font-light leading-relaxed text-[#f6edd4]/85">
+          Trump just showed a new coin, “You Missed Bitches.” Pick it up on Solana in four steps. You pay with SOL. You receive $YMBCOIN.
+        </p>
+      </div>
+
+      <ol class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <li class="panel rounded-3xl p-6">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-b from-[#fff1b8] to-[#a67c22] font-display text-2xl font-black text-[#2a1c07] shadow-lg">1</div>
+          <h3 class="mt-5 font-display text-2xl font-bold text-[#ffe7a3]">Get a Wallet</h3>
+          <p class="mt-3 leading-relaxed text-[#f6edd4]/80">Install Phantom or Solflare. Create a Solana wallet and write the recovery phrase down somewhere offline.</p>
+        </li>
+        <li class="panel rounded-3xl p-6">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-b from-[#fff1b8] to-[#a67c22] font-display text-2xl font-black text-[#2a1c07] shadow-lg">2</div>
+          <h3 class="mt-5 font-display text-2xl font-bold text-[#ffe7a3]">Fund with SOL</h3>
+          <p class="mt-3 leading-relaxed text-[#f6edd4]/80">Buy SOL on an exchange and send it to your wallet. Keep a little extra SOL so the network fee can clear.</p>
+        </li>
+        <li class="panel rounded-3xl p-6">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-b from-[#fff1b8] to-[#a67c22] font-display text-2xl font-black text-[#2a1c07] shadow-lg">3</div>
+          <h3 class="mt-5 font-display text-2xl font-bold text-[#ffe7a3]">Swap the Coin</h3>
+          <p class="mt-3 leading-relaxed text-[#f6edd4]/80">Press Buy Now. Connect the wallet. SOL is the input and $YMBCOIN is the output. Set the amount and confirm.</p>
+        </li>
+        <li class="panel rounded-3xl p-6">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-b from-[#fff1b8] to-[#a67c22] font-display text-2xl font-black text-[#2a1c07] shadow-lg">4</div>
+          <h3 class="mt-5 font-display text-2xl font-bold text-[#ffe7a3]">Hold the Piece</h3>
+          <p class="mt-3 leading-relaxed text-[#f6edd4]/80">Approve the transaction. $YMBCOIN lands in the wallet. Open Chart to watch the market, or paste the mint if it does not show.</p>
+        </li>
+      </ol>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center justify-center rounded-full px-8 py-3.5 font-stamp text-2xl tracking-[0.2em] transition">BUY NOW</a>
+        <a href="#ca" class="btn-ghost inline-flex items-center justify-center rounded-full px-8 py-3.5 font-stamp text-2xl tracking-[0.2em] transition">COPY CA</a>
+      </div>
+    </section>
+
+    <div class="reeded-bar"></div>
+
+    <section id="chart" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-stamp text-xl tracking-[0.28em] text-[#e2b93b]">LIVE MARKET</p>
+          <h2 class="mt-2 font-display text-4xl font-bold text-[#ffe7a3] sm:text-5xl">$YMBCOIN Chart</h2>
+          <p class="mt-3 max-w-xl text-[#f6edd4]/80">The Dexscreener board for the coin Trump just showed. You Missed Bitches, priced in the open.</p>
+        </div>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center rounded-full px-6 py-3 font-stamp text-xl tracking-[0.16em] transition">OPEN CHART</a>
+      </div>
+      <div class="panel overflow-hidden rounded-3xl p-2 sm:p-3">
+        <iframe
+          src="https://dexscreener.com/solana/TBA?embed=1&amp;theme=dark&amp;trades=0&amp;info=0"
+          class="h-[640px] w-full rounded-2xl bg-[#050910]"
+          title="Dexscreener chart for YMBCOIN"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <div class="reeded-bar"></div>
+
+  <footer class="bg-[#050910]/80">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.png" alt="" class="h-16 w-16 rounded-full object-cover ring-2 ring-[#e2b93b]" width="64" height="64">
+        <div>
+          <p class="font-display text-lg font-bold tracking-[0.12em] text-[#ffe7a3]">YOU MISSED BITCHES</p>
+          <p class="font-stamp text-2xl tracking-[0.2em] text-[#e2b93b]">$YMBCOIN · SOLANA</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/YMBCOINtrump" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <img src="tg.png" alt="" class="h-12 w-12 rounded-full object-cover ring-2 ring-[#e2b93b]/60" width="48" height="48">
+        </a>
+        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-lg ring-2 ring-[#e2b93b]/60" aria-label="X">
+          <img src="x.png" alt="" class="h-12 w-12 object-cover" width="48" height="48">
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=TBA" target="_blank" rel="noopener noreferrer" class="btn-gold rounded-full px-5 py-2.5 font-stamp text-xl tracking-[0.16em] transition">BUY NOW</a>
+      </div>
+    </div>
+    <p class="border-t border-[#e2b93b]/20 px-4 py-5 text-center text-sm text-[#f6edd4]/60">
+      Trump just showed a new coin, “You Missed Bitches.” $YMBCOIN is a meme coin on Solana. Do your own research.
+    </p>
+  </footer>
+
+  <script>
+    const CA = "TBA";
+
+    async function copyCA(button) {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch (err) {
+        const field = document.createElement("textarea");
+        field.value = CA;
+        document.body.appendChild(field);
+        field.select();
+        document.execCommand("copy");
+        field.remove();
+      }
+      const previous = button.textContent;
+      button.textContent = "COPIED";
+      setTimeout(() => {
+        button.textContent = previous === "COPIED" ? "COPY" : previous;
+      }, 1600);
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", function () {
+      copyCA(this);
+    });
+
+    document.getElementById("caText").addEventListener("click", function () {
+      copyCA(document.getElementById("copyBtn"));
+    });
+  </script>
+</body>
+</html>
