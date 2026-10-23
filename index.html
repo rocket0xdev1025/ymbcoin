@@ -105,6 +105,27 @@
         0 0 90px rgba(226, 185, 59, 0.38);
     }
 
+    .x-btn {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 0.7rem;
+      background: #fff;
+      box-shadow: 0 0 0 2px #e2b93b;
+    }
+
+    .x-btn:hover { box-shadow: 0 0 0 2px #ffe7a3; }
+
+    .x-mark {
+      width: 145%;
+      height: 145%;
+      max-width: none;
+      object-fit: cover;
+      filter: invert(1);
+    }
+
     .reeded-bar {
       height: 14px;
       background: repeating-linear-gradient(90deg, #fff1b8 0 2px, #7a5c1c 2px 5px, #e2b93b 5px 7px);
@@ -174,7 +195,7 @@
     @media (prefers-reduced-motion: reduce) {
       .ticker-track, .coin-float, .spin-slow, .coin-face::after {
         animation: none;
-      }
+      } 
       html { scroll-behavior: auto; }
     }
   </style>
@@ -200,8 +221,8 @@
 
       <nav class="flex items-center gap-2 sm:gap-3">
         <a href="#how" class="hidden px-2 font-stamp text-lg tracking-[0.16em] text-[#f6edd4] hover:text-[#ffe7a3] sm:inline">HOW TO BUY</a>
-        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center overflow-hidden rounded-lg bg-black ring-2 ring-[#e2b93b]/50 transition hover:ring-[#ffe7a3]" aria-label="X">
-          <img src="x.png" alt="X" class="h-10 w-10 object-cover" width="40" height="40">
+        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="x-btn" aria-label="X">
+          <img src="x.png" alt="X" class="x-mark" width="80" height="80">
         </a>
         <a href="https://dexscreener.com/solana/J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump" target="_blank" rel="noopener noreferrer" class="btn-ghost rounded-full px-4 py-2 font-stamp text-lg tracking-[0.16em] transition">CHART</a>
         <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump" target="_blank" rel="noopener noreferrer" class="btn-gold rounded-full px-4 py-2 font-stamp text-lg tracking-[0.16em] transition">BUY NOW</a>
@@ -237,8 +258,8 @@
 
           <div class="mt-6 flex items-center gap-3">
             <span class="font-stamp text-lg tracking-[0.2em] text-[#e2b93b]/80">FOLLOW</span>
-            <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-lg ring-2 ring-[#e2b93b]/60" aria-label="X">
-              <img src="x.png" alt="" class="h-11 w-11 object-cover" width="44" height="44">
+            <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="x-btn" aria-label="X">
+              <img src="x.png" alt="" class="x-mark" width="80" height="80">
             </a>
           </div>
         </div>
@@ -382,8 +403,8 @@
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-lg ring-2 ring-[#e2b93b]/60" aria-label="X">
-          <img src="x.png" alt="" class="h-12 w-12 object-cover" width="48" height="48">
+        <a href="https://x.com/YMBCOINtrump" target="_blank" rel="noopener noreferrer" class="x-btn" aria-label="X">
+          <img src="x.png" alt="" class="x-mark" width="80" height="80">
         </a>
         <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=J8NLpWf52NrMMXLEhf26NUVrpst8Xm3CS91KZ5RPpump" target="_blank" rel="noopener noreferrer" class="btn-gold rounded-full px-5 py-2.5 font-stamp text-xl tracking-[0.16em] transition">BUY NOW</a>
       </div>
